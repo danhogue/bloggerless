@@ -1,0 +1,10 @@
+.env
+.serverless
+*.zip
+*.pyc
+*build
+*dist
+*node_modules
+.idea/
+grokerylab.iml
+.DS_Store
