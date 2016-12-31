@@ -13,8 +13,7 @@ const store = configureStore()
 //---------------------------------------------
 const history = syncHistoryWithStore(hashHistory, store)
 
-render( <
-    Root store = { store }
+render( < Root store = { store }
     history = { history }
     />,
     document.getElementById('root')

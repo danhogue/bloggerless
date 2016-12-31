@@ -45,9 +45,7 @@ class App extends Component {
     const { children, inputValue } = this.props
     return (
       <div>
-        <Explore value={inputValue}
-                 onChange={this.handleChange} />
-        <hr />
+        <Explore value={inputValue} onChange={this.handleChange} />
         {this.renderErrorMessage()}
         {children}
       </div>
