@@ -11,7 +11,7 @@ const loadData = ({ login, loadUser, loadStarred }) => {
   loadStarred(login)
 }
 
-class UserPage extends Component {
+class PostPage extends Component {
   static propTypes = {
     login: PropTypes.string.isRequired,
     user: PropTypes.object,
@@ -54,22 +54,15 @@ class UserPage extends Component {
     const { starredRepos, starredRepoOwners, starredPagination } = this.props
     return (
       <div>
-        <User user={user} />
-        <hr />
-        <List renderItem={this.renderRepo}
-              items={zip(starredRepos, starredRepoOwners)}
-              onLoadMoreClick={this.handleLoadMoreClick}
-              loadingLabel={`Loading ${login}'s starred...`}
-              {...starredPagination} />
+        <p>Hello Post</p>
       </div>
     )
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  // We need to lower case the login due to the way GitHub's API behaves.
-  // Have a look at ../middleware/api.js for more details.
-  const login = ownProps.params.login.toLowerCase()
+  
+  const login = ownProps.params.post.toLowerCase()
 
   const {
     pagination: { starredByUser },
@@ -92,4 +85,4 @@ const mapStateToProps = (state, ownProps) => {
 export default connect(mapStateToProps, {
   loadUser,
   loadStarred
-})(UserPage)
+})(PostPage)

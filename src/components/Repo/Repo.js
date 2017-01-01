@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
+import './Repo.css'
 
 const Repo = ({ repo, owner }) => {
   const { login } = owner

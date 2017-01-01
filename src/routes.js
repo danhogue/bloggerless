@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route } from 'react-router'
-import App from './containers/App'
-import UserPage from './containers/UserPage'
-import RepoPage from './containers/RepoPage'
+import Blog from './containers/Blog'
+import PostsPage from './containers/PostsPage'
+import PostPage from './containers/PostPage'
 
-export default <Route path="/" component={App}>
-  <Route path="/:login/:name"
-         component={RepoPage} />
-  <Route path="/:login"
-         component={UserPage} />
+export default <Route path="/blog" component={Blog}>
+  <Route path="/"
+         component={PostsPage} />
+  <Route path="/posts/:post"
+         component={PostPage} />
 </Route>

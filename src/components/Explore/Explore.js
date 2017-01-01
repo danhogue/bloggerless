@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import './Explore.css'
 
 const GITHUB_REPO = 'https://github.com/reactjs/redux'
 
@@ -37,7 +38,7 @@ export default class Explore extends Component {
 
   render() {
     return (
-      <div>
+      <div id="explore">
         <p>Type a username or repo full name and hit 'Go':</p>
         <input size="45"
                ref="input"

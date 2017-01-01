@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import './List.css'
 
 export default class List extends Component {
   static propTypes = {
@@ -44,7 +45,7 @@ export default class List extends Component {
     }
 
     return (
-      <div>
+      <div className='List'>
         {items.map(renderItem)}
         {pageCount > 0 && !isLastPage && this.renderLoadMore()}
       </div>
