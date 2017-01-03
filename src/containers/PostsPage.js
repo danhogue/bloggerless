@@ -1,25 +1,16 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { loadUser, loadStarred } from '../actions'
-import Repo from '../components/Repo/Repo'
-import User from '../components/User/User'
+import { loadPosts } from '../actions'
 import List from '../components/List/List'
-import zip from 'lodash/zip'
 
-const loadData = ({ login, loadUser, loadStarred }) => {
-  loadUser(login, [ 'name' ])
-  loadStarred(login)
+const loadData = ({ loadPosts }) => {
+  loadPosts()
 }
 
 class PostsPage extends Component {
   static propTypes = {
-    login: PropTypes.string.isRequired,
-    user: PropTypes.object,
-    starredPagination: PropTypes.object,
-    starredRepos: PropTypes.array.isRequired,
-    starredRepoOwners: PropTypes.array.isRequired,
-    loadUser: PropTypes.func.isRequired,
-    loadStarred: PropTypes.func.isRequired
+    posts: PropTypes.array.isRequired,
+    loadPosts: PropTypes.func.isRequired
   }
 
   componentWillMount() {
@@ -27,68 +18,35 @@ class PostsPage extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.login !== this.props.login) {
-      loadData(nextProps)
-    }
+    this.props = nextProps
   }
 
-  handleLoadMoreClick = () => {
-    this.props.loadStarred(this.props.login, true)
-  }
-
-  renderRepo([ repo, owner ]) {
+  renderItem(item) {
     return (
-      <Repo
-        repo={repo}
-        owner={owner}
-        key={repo.fullName} />
+      <div key={item.title}>{item.title}</div>
     )
   }
 
   render() {
-    const { user, login } = this.props
-    if (!user) {
-      return <h1><i>Loading {login}{"'s profile..."}</i></h1>
-    }
-
-    const { starredRepos, starredRepoOwners, starredPagination } = this.props
+    const { posts } = this.props
     return (
       <div>
-        <User user={user} />
-        <hr />
-        <List renderItem={this.renderRepo}
-              items={zip(starredRepos, starredRepoOwners)}
-              onLoadMoreClick={this.handleLoadMoreClick}
-              loadingLabel={`Loading ${login}'s starred...`}
-              {...starredPagination} />
+        <List renderItem={this.renderItem}
+              posts={posts}
+              loadingLabel={`Loading posts...`}
+              />
       </div>
     )
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  // Have a look at ../middleware/api.js for more details.
-  const login = 'chmod740';//ownProps.params.post.toLowerCase()
-
-  const {
-    pagination: { starredByUser },
-    entities: { users, repos }
-  } = state
-
-  const starredPagination = starredByUser[login] || { ids: [] }
-  const starredRepos = starredPagination.ids.map(id => repos[id])
-  const starredRepoOwners = starredRepos.map(repo => users[repo.owner])
-
+  let posts = Object.keys(state.posts).map((k) => state.posts[k])
   return {
-    login,
-    starredRepos,
-    starredRepoOwners,
-    starredPagination,
-    user: users[login]
+    posts: posts
   }
-}
+} 
 
 export default connect(mapStateToProps, {
-  loadUser,
-  loadStarred
+  loadPosts
 })(PostsPage)

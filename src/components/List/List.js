@@ -4,50 +4,33 @@ import './List.css'
 export default class List extends Component {
   static propTypes = {
     loadingLabel: PropTypes.string.isRequired,
-    pageCount: PropTypes.number,
     renderItem: PropTypes.func.isRequired,
-    items: PropTypes.array.isRequired,
-    isFetching: PropTypes.bool.isRequired,
-    onLoadMoreClick: PropTypes.func.isRequired,
-    nextPageUrl: PropTypes.string
+    posts: PropTypes.array.isRequired
   }
 
   static defaultProps = {
-    isFetching: true,
     loadingLabel: 'Loading...'
-  }
-
-  renderLoadMore() {
-    const { isFetching, onLoadMoreClick } = this.props
-    return (
-      <button style={{ fontSize: '150%' }}
-              onClick={onLoadMoreClick}
-              disabled={isFetching}>
-        {isFetching ? 'Loading...' : 'Load More'}
-      </button>
-    )
   }
 
   render() {
     const {
-      isFetching, nextPageUrl, pageCount,
-      items, renderItem, loadingLabel
+      posts, 
+      renderItem, 
+      loadingLabel
     } = this.props
 
-    const isEmpty = items.length === 0
-    if (isEmpty && isFetching) {
+    const isEmpty = posts.length === 0
+    if (isEmpty) {
       return <h2><i>{loadingLabel}</i></h2>
     }
 
-    const isLastPage = !nextPageUrl
-    if (isEmpty && isLastPage) {
+    if (isEmpty) {
       return <h1><i>Nothing here!</i></h1>
     }
 
     return (
       <div className='List'>
-        {items.map(renderItem)}
-        {pageCount > 0 && !isLastPage && this.renderLoadMore()}
+        {posts.map(renderItem)}
       </div>
     )
   }
