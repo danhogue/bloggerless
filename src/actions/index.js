@@ -16,6 +16,21 @@ export const loadPosts = () => (dispatch, getState) => {
     return dispatch(fetchPosts(url))
 }
 
+export const POST_REQUEST = 'POST_REQUEST'
+export const POST_SUCCESS = 'POST_SUCCESS'
+export const POST_FAILURE = 'POST_FAILURE'
+
+const fetchPost = (url) => ({
+    [CALL_API]: {
+        types: [POST_REQUEST, POST_SUCCESS, POST_FAILURE],
+        endpoint: url
+    }
+})
+
+export const loadPost = (url) => (dispatch, getState) => {
+    return dispatch(fetchPost(url))
+}
+
 export const RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE'
 
 export const resetErrorMessage = () => ({

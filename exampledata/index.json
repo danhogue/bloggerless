@@ -1,7 +1,7 @@
 {
     "posts": [
-        { "title": "Hello World" },
-        { "title": "Second Post" },
-        { "title": "Success!" }
+        { "title": "Hello World", "id": "hello" },
+        { "title": "Second Post", "id": "second" },
+        { "title": "Success!", "id": "success" }
     ]
 }

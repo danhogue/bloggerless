@@ -22,8 +22,9 @@ class PostsPage extends Component {
   }
 
   renderItem(item) {
+    let href = '/#/posts/' + item.id + '.json'
     return (
-      <div key={item.title}>{item.title}</div>
+      <div key={item.title}><a href={href}>{item.title}</a></div>
     )
   }
 
