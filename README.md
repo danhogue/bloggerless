@@ -15,11 +15,7 @@ If you have found this open source codebase useful in any way, or if you are int
 
 ## Development info
 
-This project was built with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+This project was built with [Create React App](https://github.com/facebookincubator/create-react-app). In the project directory, you can run:
 
 ### `npm start`
 
