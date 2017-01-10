@@ -4,10 +4,6 @@ Bloggerless is going to be a really awesome serverless blog framework. It will a
 them via AWS S3. Both the website and your post data are hosted as static files. This makes it both really fast to 
 load and really cheap to host.
 
-I'm building it because I want to be able to host blogs for my wife and I where we have full controll over both the code 
-and styling and can customize it however we want, but don't have to mess with servers and databases etc., and also don't 
-have to pay more than a few cents a month for them.
-
 I'm inspired by the [Ghost](https://github.com/TryGhost/Ghost) blogging platform, the [Jekyll](https://github.com/jekyll/jekyll) 
 project, and the [Redux Real World](https://github.com/reactjs/redux/tree/master/examples/real-world) example project.
 
@@ -19,7 +15,7 @@ This project was built with [Create React App](https://github.com/facebookincuba
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
@@ -46,7 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 # License
 
-Bloggerless - An elegantly simple React / Redux blog framework
+Bloggerless - An elegantly simple React / Redux serverless blog framework
 
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
