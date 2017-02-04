@@ -2,7 +2,6 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import Blog from './containers/Blog'
 import AboutPage from './containers/AboutPage'
-import PortfolioPage from './containers/PortfolioPage'
 import PostsPage from './containers/PostsPage'
 import PostPage from './containers/PostPage'
 

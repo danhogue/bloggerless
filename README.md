@@ -3,7 +3,6 @@
 Bloggerless is going to be a really awesome serverless blog framework. It's still very much an alpha project, but the goal is to 
 make it easy to author posts and publish them as static, git versioned resources, separate from the blog application code. The blog 
 application itself will be an elegantly architected, React based SPA that can also be hosted serverlessly, and will be easy to 
-customize and deploy.
 
 I'm inspired by the [Ghost](https://github.com/TryGhost/Ghost) blogging platform, the [Jekyll](https://github.com/jekyll/jekyll) 
 project, and the [Redux Real World](https://github.com/reactjs/redux/tree/master/examples/real-world) example project.
@@ -16,7 +15,7 @@ This project was built with [Create React App](https://github.com/facebookincuba
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
@@ -43,7 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 # License
 
-Bloggerless - An elegantly simple React / Redux blog framework
+Bloggerless - An elegantly simple React / Redux serverless blog framework
 
 |                      |                                          |
 |:---------------------|:-----------------------------------------|

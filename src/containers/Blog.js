@@ -22,7 +22,6 @@ class Blog extends Component {
     if (!errorMessage) {
       return null
     }
-
     return (
       <p style={{ backgroundColor: '#e99', padding: 10 }}>
         <b>{errorMessage}</b>

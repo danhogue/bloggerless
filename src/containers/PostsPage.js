@@ -31,8 +31,6 @@ class PostsPage extends Component {
 
   render() {
     const { posts } = this.props
-    console.log("posts props")
-    console.log(this.props)
     return (
       <div className='page-content'>
         <SideNavBar pageTitle={this.props.route.path}></SideNavBar>

@@ -23,7 +23,8 @@ class PostPage extends Component {
   render() {
     const { post} = this.props
     return (
-      <div>
+      <div className='page-content'>
+        <h3>Post</h3>
         <p>{post}</p>
       </div>
     )
