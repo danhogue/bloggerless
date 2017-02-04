@@ -7,7 +7,7 @@ class AboutPage extends Component {
   render() {
 
     return (
-      <div>
+      <div className='page-content'>
         <p>About</p>
       </div>
     )

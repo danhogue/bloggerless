@@ -39,8 +39,10 @@ class Blog extends Component {
     const { children } = this.props
     return (
       <div>
-        {this.renderErrorMessage()}
-        {children}
+        <div className='page-content-wrapper'>
+          {this.renderErrorMessage()}
+          {children}
+        </div>
       </div>
     )
   }

@@ -24,7 +24,7 @@ class PostPage extends Component {
     const { post} = this.props
     return (
       <div>
-        <p>Hello {post}</p>
+        <p>{post}</p>
       </div>
     )
   }

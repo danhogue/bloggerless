@@ -1,12 +1,9 @@
 # Bloggerless
 
-Bloggerless is going to be a really awesome serverless blog framework. It will allow you to author posts and publish 
-them via AWS S3. Both the website and your post data are hosted as static files. This makes it both really fast to 
-load and really cheap to host.
-
-I'm building it because I want to be able to host blogs for my wife and I where we have full controll over both the code 
-and styling and can customize it however we want, but don't have to mess with servers and databases etc., and also don't 
-have to pay more than a few cents a month for them.
+Bloggerless is going to be a really awesome serverless blog framework. It's still very much an alpha project, but the goal is to 
+make it easy to author posts and publish them as static, git versioned resources, separate from the blog application code. The blog 
+application itself will be an elegantly architected, React based SPA that can also be hosted serverlessly, and will be easy to 
+customize and deploy.
 
 I'm inspired by the [Ghost](https://github.com/TryGhost/Ghost) blogging platform, the [Jekyll](https://github.com/jekyll/jekyll) 
 project, and the [Redux Real World](https://github.com/reactjs/redux/tree/master/examples/real-world) example project.

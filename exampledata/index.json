@@ -1,7 +1,24 @@
 {
-    "posts": [
-        { "title": "Hello World", "id": "hello" },
-        { "title": "Second Post", "id": "second" },
-        { "title": "Success!", "id": "success" }
-    ]
+    "portfolio": {
+        "professional": [
+            { "id": "second", "title": "Second Post", "body": "" },
+            { "id": "success", "title": "Success!", "body": "" }
+        ],
+        "personal": [
+            { "id": "hello", "title": "Hello World", "body": "" },
+            { "id": "second", "title": "Second Post", "body": "" },
+            { "id": "success", "title": "Success!", "body": "" }
+        ]
+    },
+    "blog": {
+        "professional": [
+            { "id": "second", "title": "Second Post", "body": "" },
+            { "id": "success", "title": "Success!", "body": "" }
+        ],
+        "personal": [
+            { "id": "hello", "title": "Hello World", "body": "" },
+            { "id": "second", "title": "Second Post", "body": "" },
+            { "id": "success", "title": "Success!", "body": "" }
+        ]
+    }
 }
