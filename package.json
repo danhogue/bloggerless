@@ -3,11 +3,18 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "front-matter": "^2.1.2",
+    "gulp": "^3.9.1",
+    "gulp-markdown": "^1.2.0",
+    "highlight.js": "^9.9.0",
+    "markdown-it": "^8.2.2",
+    "object-assign": "^4.1.1",
     "react-scripts": "^0.6.0",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
-    "redux-logger": "^2.6.1"
+    "redux-logger": "^2.6.1",
+    "through2": "^2.0.3"
   },
   "dependencies": {
     "history": "^4.5.1",
@@ -24,6 +31,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "compile": "gulp compile",
     "build": "react-scripts build",
     "deploy": "./scripts/deploy.sh",
     "eject": "react-scripts eject"
