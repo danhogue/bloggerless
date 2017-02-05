@@ -1,4 +1,4 @@
-import { CALL_API, Schemas } from '../middleware/api'
+import { CALL_API } from '../middleware/api'
 
 export const POSTS_REQUEST = 'POSTS_REQUEST'
 export const POSTS_SUCCESS = 'POSTS_SUCCESS'
@@ -12,7 +12,7 @@ const fetchPosts = (url) => ({
 })
 
 export const loadPosts = () => (dispatch, getState) => {
-    const url = '/index.json'
+    const url = '/data/posts/index.json'
     return dispatch(fetchPosts(url))
 }
 
@@ -27,7 +27,8 @@ const fetchPost = (url) => ({
     }
 })
 
-export const loadPost = (url) => (dispatch, getState) => {
+export const loadPost = (post) => (dispatch, getState) => {
+    const url = '/data/posts/' + post + '/index.json'
     return dispatch(fetchPost(url))
 }
 

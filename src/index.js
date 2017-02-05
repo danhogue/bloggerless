@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { hashHistory, browserHistory, useRouterHistory } from 'react-router'
+import { useRouterHistory } from 'react-router'
 import { createHashHistory } from 'react-router/node_modules/history'
 import { syncHistoryWithStore } from 'react-router-redux'
 import Root from './containers/Root'
@@ -17,6 +17,6 @@ const store = configureStore()
 // you don't have to hack a /* route.
 const history = syncHistoryWithStore(appHistory, store)
 
-render(<Root store = { store } history = { history } />,
+render(<Root store={ store } history={ history } />,
     document.getElementById('root')
 )

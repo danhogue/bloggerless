@@ -1,4 +1,5 @@
-const API_ROOT = 'http://bloggerless-data.s3-website-us-west-2.amazonaws.com'
+//const API_ROOT = 'http://bloggerless-data.s3-website-us-west-2.amazonaws.com'
+const API_ROOT = process.env.PUBLIC_URL
 
 // Fetches an API response.
 const callApi = (endpoint) => {

@@ -2,41 +2,38 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { loadPost } from '../actions'
 
-const loadData = ({ post, loadPost }) => {
-  //loadPost(post)
+const loadData = (loadPost, post) => {
+  loadPost(post)
 }
 
 class PostPage extends Component {
   static propTypes = {
-    post: PropTypes.string.isRequired
+    post: PropTypes.object.isRequired,
+    loadPost: PropTypes.func.isRequired
   }
 
   componentWillMount() {
-    loadData(this.props)
+    loadData(this.props.loadPost, this.props.params.post)
   }
 
   componentWillReceiveProps(nextProps) {
       this.props = nextProps
-      loadData(this.props)
   }
 
   render() {
     const { post} = this.props
     return (
       <div className='page-content'>
-        <h3>Post</h3>
-        <p>{post}</p>
+        <h3>{post.title}</h3>
+        <p>{post.body}</p>
       </div>
     )
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  
-  const post = ownProps.params.post
-
   return {
-    post: post
+    post: state.post
   }
 }
 

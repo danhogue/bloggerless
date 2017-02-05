@@ -4,11 +4,18 @@ import { routerReducer as routing } from 'react-router-redux'
 import { combineReducers } from 'redux'
 
 // Updates an entity cache in response to any action with response.posts.
-const posts = (state = {}, action) => {
-    if (action.response && action.response.posts) {
+const posts = (state = [], action) => {
+    if (action.type === ActionTypes.POSTS_SUCCESS && action.response && action.response.posts) {
         return merge({}, state, action.response.posts)
     }
+    return state
+}
 
+const post = (state = {}, action) => {
+    if (action.type === ActionTypes.POST_SUCCESS && action.response) {
+        state = action.response
+        return state
+    }
     return state
 }
 
@@ -27,6 +34,7 @@ const errorMessage = (state = null, action) => {
 
 const rootReducer = combineReducers({
     posts,
+    post,
     errorMessage,
     routing
 })
