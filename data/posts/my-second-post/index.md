@@ -1,9 +1,10 @@
 ---
 title: My Second Post!
+path: "my-second-post"
 date: "2015-05-06T23:46:37.121Z"
-layout: post
-path: "/my-second-post/"
-category: "FrontEnd"
+layout: "blog"
+navKeys: ["Professional Me", "Leadership"]
+filterKeys: []
 description: "Civil society; save lives pathway to a better life public-private partnerships solution, tackle, protect UNHCR social movement Jane Addams sustainable campaign respond equality."
 ---
 

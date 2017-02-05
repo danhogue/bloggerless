@@ -23,6 +23,7 @@ const gatherPosts = function(obj, arr) {
 
 class PostsPage extends Component {
   static propTypes = {
+    navKeys: PropTypes.object,
     posts: PropTypes.array.isRequired,
     loadPosts: PropTypes.func.isRequired
   }
@@ -36,9 +37,9 @@ class PostsPage extends Component {
   }
 
   renderItem(item) {
-    let href = '/#/posts/' + item.id
+    let href = '/#/posts/' + item.path
     return (
-      <div key={item.title}><a href={href}>{item.title}</a></div>
+      <div key={item.path}><a href={href}>{item.title}</a></div>
     )
   }
 
@@ -46,7 +47,7 @@ class PostsPage extends Component {
     const { posts } = this.props
     return (
       <div className='page-content'>
-        <SideNavBar pageTitle={this.props.route.path}></SideNavBar>
+        <SideNavBar path={this.props.route.path} navKeys={this.props.navKeys}></SideNavBar>
         <div className='sidebar-page'>
           <List renderItem={this.renderItem}
               posts={posts}
@@ -61,17 +62,27 @@ class PostsPage extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   let pathParams = ownProps.route.path.split('/').filter(function(el) {return el.length !== 0})
+  let select = state.posts[pathParams[0]] ? state.posts[pathParams[0]] : []
 
-  let select = state.posts
-  for (var i in pathParams) {
-    if(select[pathParams[i]]){
-      select = select[pathParams[i]]
-    }
+  let navKeys = {}
+  let posts = []
+  for (var i in select) {
+
+      if (true) {
+        posts.push(select[i])
+      }
+
+      let keys = select[i].navKeys
+      if (!navKeys[keys[0]]) {
+        navKeys[keys[0]] = []
+      }
+      navKeys[keys[0]].push(keys[1])
   }
-  let posts = gatherPosts(select, [])
 
+  // let posts = filterPosts(select, pathParams)
   return {
-    posts: posts
+    posts: posts,
+    navKeys: navKeys
   }
 } 
 

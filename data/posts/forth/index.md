@@ -1,10 +1,12 @@
 ---
-title: Forthes
+title: "Forthes"
+path: "forth"
 date: "2015-05-30T22:40:32.169Z"
-layout: post
-path: "/forth/"
-category: "FrontEnd"
-description: "Employment, gender, breakthrough insights carbon emissions reductions peaceful, sharing economy Angelina Jolie accelerate, inclusive capitalism research inspire social change social good informal economies minority. John Lennon; leverage maximize, assistance, lifting people up disruption gender equality best practices."
+layout: "blog"
+navKeys: ["Personal Me", "Work"]
+filterKeys: ["employment", "gender"]
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel neque dignissim mi maximus interdum. 
+Cras dictum quam et ex molestie facilisis. Proin dapibus sed sapien nec gravida."
 ---
 
 *This post is going to be a little hard to read for those that don't speak latin.*

@@ -4,9 +4,10 @@ var frontMatter = require('front-matter');
 var markdownIt = require('markdown-it');
 var hljs = require('highlight.js');
 var objectAssign = require('object-assign');
+var fs = require('fs');
 
-const compileSource = 'data'
-const compileDestination = 'public/data'
+const sourceDir = 'data'
+const destinationDir = 'public/data'
 
 const highlight = (str, lang) => {
   if ((lang !== null) && hljs.getLanguage(lang)) {
@@ -24,39 +25,46 @@ const highlight = (str, lang) => {
   return ''
 }
 
-const compileMarkdown = function (chunk, enc, cb) {
-    const md = markdownIt({ html: true, linkify: true, typographer: true, highlight})
-    const meta = frontMatter(chunk.contents + "")
+const md = markdownIt({ 
+  html: true, 
+  linkify: true, 
+  typographer: true, 
+  highlight
+})
+
+var postIndex = {"count":0}
+
+const addToIndex = function(metaInfo) {
+    postIndex.count += 1
+    if (!postIndex[metaInfo.layout]) {
+      postIndex[metaInfo.layout] = []
+    }
+    postIndex[metaInfo.layout].push(metaInfo)
+}
+
+const compileMarkdown = function (file, enc, cb) {
+    const meta = frontMatter(file.contents.toString())
     const body = md.render(meta.body)
-    const result = objectAssign({}, meta.attributes, {body})
-    chunk.contents = new Buffer(JSON.stringify(result), "utf8");
-    chunk.path = chunk.path.replace(/[^\/]*$/, '')+"index.json"
-    cb(null, chunk)
-}
+    const fullResult = objectAssign({}, meta.attributes, {body})
 
-const markdownToJson = function (file, enc, cb) {
-    const folderName = file.path.match(/([^\/]*)\/*$/)[1]
-    gulp.src(file.path+'/*.md')
-    .pipe(through.obj(compileMarkdown))
-    .pipe(gulp.dest(compileDestination + '/posts/' + folderName))
-    cb(null, file)
-}
+    addToIndex(meta.attributes)
 
-const copyPostFiles = function (file, enc, cb) {
-       const folderName = file.path.match(/([^\/]*)\/*$/)[1]
-        gulp.src(file.path+'/*.png')
-        .pipe(gulp.dest(compileDestination + '/posts/' + folderName))
-        gulp.src(file.path+'/*.jpg')
-        .pipe(gulp.dest(compileDestination + '/posts/' + folderName))
-        gulp.src(file.path+'/*.css')
-        .pipe(gulp.dest(compileDestination + '/posts/' + folderName))
+    file.contents = new Buffer(JSON.stringify(fullResult), "utf8");
+    file.path = file.path.replace('.md', '.json')
     cb(null, file)
 }
 
 gulp.task('compile', function() {
-   gulp.src(compileSource+'/posts/*')
-   .pipe(through.obj(markdownToJson))  
-   .pipe(through.obj(copyPostFiles))
-   gulp.src(compileSource+'/*.json')
-   .pipe(gulp.dest(compileDestination))
+    gulp.src(sourceDir+'/posts/**/index.md')
+    .pipe(through.obj(compileMarkdown))
+    .pipe(gulp.dest(destinationDir + '/posts/'))
+    .on('end', function(){ 
+        fs.writeFile(destinationDir+"/posts/index.json", JSON.stringify(postIndex), "utf8")
+    });
+    
+    gulp.src([sourceDir+'/posts/**/*.*', '!'+sourceDir+'/posts/**/*.md'])
+    .pipe(gulp.dest(destinationDir + '/posts/'))
+
+    gulp.src(sourceDir+'/*.json')
+    .pipe(gulp.dest(destinationDir))
 });

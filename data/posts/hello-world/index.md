@@ -1,9 +1,10 @@
 ---
 title: "The Birth of Movable Type"
+path: "hello-world"
 date: "2015-03-01T22:12:03.284Z"
-layout: post
-path: "/hello-world/"
-category: "Typography TESTS"
+layout: "blog"
+navKeys: ["Personal Me", "Books"]
+filterKeys: []
 description: "German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible."
 ---
 
