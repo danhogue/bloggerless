@@ -36,13 +36,6 @@ class PostsPage extends Component {
     this.props = nextProps
   }
 
-  renderItem(item) {
-    let href = '/#/posts/' + item.path
-    return (
-      <div key={item.path}><a href={href}>{item.title}</a></div>
-    )
-  }
-
   render() {
     const { posts } = this.props
     return (

@@ -12,10 +12,16 @@ export default class List extends Component {
     loadingLabel: 'Loading...'
   }
 
+  renderItem(item) {
+    let href = '/#/posts/' + item.path
+    return (
+      <div key={item.path}><a href={href}>{item.title}</a></div>
+    )
+  }
+
   render() {
     const {
       posts, 
-      renderItem, 
       loadingLabel
     } = this.props
 
@@ -30,7 +36,7 @@ export default class List extends Component {
 
     return (
       <div className='List'>
-        {posts.map(renderItem)}
+        {posts.map(this.renderItem)}
       </div>
     )
   }

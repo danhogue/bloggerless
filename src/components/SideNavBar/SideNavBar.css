@@ -6,7 +6,8 @@
 .sidebar {
     position: fixed;
     width: 220px;
-    background-color: gray;
+    /*background-color: gray;*/
+    border-right: 1px solid gray;
     height: 100%
 }
 
