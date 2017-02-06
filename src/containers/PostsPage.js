@@ -54,25 +54,27 @@ class PostsPage extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  let pathParams = ownProps.route.path.split('/').filter(function(el) {return el.length !== 0})
+  let pathParams = ownProps.location.pathname.split('/').filter(function(el) {return el.length !== 0})
   let select = state.posts[pathParams[0]] ? state.posts[pathParams[0]] : []
 
   let navKeys = {}
   let posts = []
   for (var i in select) {
-
-      if (true) {
+      if (!select.hasOwnProperty(i)) {
+        continue
+      }
+      let keys = select[i].navKeys
+      if ((keys[0] === ownProps.location.query.cat1 || !ownProps.location.query.cat1)
+          && (keys[1] === ownProps.location.query.cat2 || !ownProps.location.query.cat2)) {
         posts.push(select[i])
       }
-
-      let keys = select[i].navKeys
+      
       if (!navKeys[keys[0]]) {
         navKeys[keys[0]] = []
       }
       navKeys[keys[0]].push(keys[1])
   }
-
-  // let posts = filterPosts(select, pathParams)
+  
   return {
     posts: posts,
     navKeys: navKeys

@@ -4,7 +4,6 @@ import './List.css'
 export default class List extends Component {
   static propTypes = {
     loadingLabel: PropTypes.string.isRequired,
-    renderItem: PropTypes.func.isRequired,
     posts: PropTypes.array.isRequired
   }
 

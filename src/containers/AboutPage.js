@@ -7,7 +7,10 @@ class AboutPage extends Component {
 
     return (
       <div className='page-content'>
-        <p>About</p>
+        <h3>Home Page</h3>
+        <a href='#/portfolio'>Portfolio</a>
+        <br />
+        <a href='#/blog'>Blog</a>
       </div>
     )
   }

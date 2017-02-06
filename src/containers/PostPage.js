@@ -20,10 +20,15 @@ class PostPage extends Component {
       this.props = nextProps
   }
 
+  back() {
+    window.history.back()
+  }
+
   render() {
     const { post} = this.props
     return (
       <div className='page-content'>
+        <button onClick={this.back}>Back To Posts</button>
         <h3>{post.title}</h3>
         <div dangerouslySetInnerHTML={{ __html: post.body }} />
       </div>

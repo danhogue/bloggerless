@@ -1,11 +1,12 @@
 ---
-title: My Second Post!
 path: "my-second-post"
-date: "2015-05-06T23:46:37.121Z"
 layout: "blog"
 navKeys: ["Professional Me", "Leadership"]
 filterKeys: []
+title: My Second Post!
+date: "2015-05-06T23:46:37.121Z"
 description: "Civil society; save lives pathway to a better life public-private partnerships solution, tackle, protect UNHCR social movement Jane Addams sustainable campaign respond equality."
+img: "http://placehold.it/150x150"
 ---
 
 Wow! I love blogging so much already.

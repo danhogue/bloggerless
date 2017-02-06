@@ -1,11 +1,12 @@
 ---
-title: Thirdings
 path: "third"
-date: "2015-05-29T22:40:32.169Z"
 layout: "portfolio"
 navKeys: ["Professional Me", "Devops"]
 filterKeys: []
+title: Thirdings
+date: "2015-05-29T22:40:32.169Z"
 description: "Employment, gender, breakthrough insights carbon emissions reductions peaceful, sharing economy Angelina Jolie accelerate, inclusive capitalism research inspire social change social good informal economies minority. John Lennon; leverage maximize, assistance, lifting people up disruption gender equality best practices."
+img: "http://placehold.it/150x150"
 ---
 
 *This post is going to be a little hard to read for those that don't speak latin.*
