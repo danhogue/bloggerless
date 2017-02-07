@@ -15,7 +15,7 @@ export default class Gallery extends Component {
     let href = '/#/posts/' + item.path
     return (
       <div key={item.path} className='gallery__item'>
-        <img src={item.img} />
+        <a href={href}><img src={item.img} /></a>
         <h3><a href={href}>{item.title}</a></h3>
         <p>{item.description}</p>
         </div>
@@ -38,7 +38,7 @@ export default class Gallery extends Component {
     }
 
     return (
-      <div>
+      <div className="gallery-wrapper">
         <header></header>
         <section>
           <ul className="gallery">

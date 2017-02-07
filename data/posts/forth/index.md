@@ -7,7 +7,7 @@ title: "Forthes"
 date: "2015-05-30T22:40:32.169Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel neque dignissim mi maximus interdum. 
 Cras dictum quam et ex molestie facilisis. Proin dapibus sed sapien nec gravida."
-img: "http://placehold.it/250x150"
+img: "./data/posts/forth/image.jpg"
 ---
 
 *This post is going to be a little hard to read for those that don't speak latin.*

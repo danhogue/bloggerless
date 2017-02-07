@@ -6,7 +6,8 @@
 .sidebar {
     position: fixed;
     width: 220px;
-    background-color: gray;
+    color: white;
+    background-color: rgba(49, 51, 48, 0.972549);
     height: 100%
 }
 
@@ -16,7 +17,7 @@
 
 .sidebar li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .sidebar li a:hover {

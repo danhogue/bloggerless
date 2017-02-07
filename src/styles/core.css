@@ -5,4 +5,6 @@ body,
     margin: 0;
     padding: 0;
     height: 100%;
+    font: 400 112.5%/1.65 Raleway,sans-serif,serif;
+    background-color: #ededed;
 }
