@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { loadPosts } from '../actions'
-import List from '../components/List/List'
+import Gallery from '../components/Gallery/Gallery'
 import SideNavBar from '../components/SideNavBar/SideNavBar'
 
 const loadData = ({ loadPosts }) => {
@@ -42,7 +42,7 @@ class PostsPage extends Component {
       <div className='page-content'>
         <SideNavBar path={this.props.route.path} navKeys={this.props.navKeys}></SideNavBar>
         <div className='sidebar-page'>
-          <List renderItem={this.renderItem}
+          <Gallery renderItem={this.renderItem}
               posts={posts}
               loadingLabel={`Loading posts...`}
               />

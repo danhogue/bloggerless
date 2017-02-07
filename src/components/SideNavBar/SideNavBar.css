@@ -6,9 +6,21 @@
 .sidebar {
     position: fixed;
     width: 220px;
-    /*background-color: gray;*/
-    border-right: 1px solid gray;
+    background-color: gray;
     height: 100%
+}
+
+.sidebar li {
+    list-style-type: none;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar li a:hover {
+    color: goldenrod;
 }
 
 @media(max-width: 767px) {

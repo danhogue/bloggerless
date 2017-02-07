@@ -1,5 +1,5 @@
 ---
-path: "forth"
+path: "another"
 layout: "blog"
 navKeys: ["Personal Me", "Work"]
 filterKeys: ["employment", "gender"]
