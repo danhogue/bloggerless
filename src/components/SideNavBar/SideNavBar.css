@@ -24,15 +24,11 @@
     color: goldenrod;
 }
 
-@media(max-width: 767px) {
+@media(max-width: 678px) {
     .sidebar {
         display: none;
     }
     .sidebar-page {
         left: 0;
     }
-}
-
-@media(min-width: 768px) {
-
 }

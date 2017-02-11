@@ -13,11 +13,24 @@ export default class Gallery extends Component {
 
   renderItem(item) {
     let href = '/#/posts/' + item.path
+    const maxLength = 180
+    let description = item.description
+    if (description.length > maxLength) {
+      description = description.slice(0,maxLength)
+      for (var i=maxLength; i > 0; i--) {
+        if (!/\s/.test(description[i])){
+          description = description.slice(0, i)
+        } else {
+          break
+        }
+      }
+      description += '....' 
+    }
     return (
       <div key={item.path} className='gallery__item'>
         <a href={href}><img src={item.img} /></a>
-        <h3><a href={href}>{item.title}</a></h3>
-        <p>{item.description}</p>
+        <h2><a href={href}>{item.title}</a></h2>
+        <p>{description}</p>
         </div>
     )
   }

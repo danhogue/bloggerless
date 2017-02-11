@@ -8,19 +8,6 @@ const loadData = ({ loadPosts }) => {
   loadPosts()
 }
 
-const gatherPosts = function(obj, arr) {
-  for (var prop in obj) {
-    if (obj.hasOwnProperty(prop)) {
-        if (Array.isArray(obj[prop])) {
-          arr = arr.concat(obj[prop])
-        } else {
-          arr = gatherPosts(obj[prop], arr)
-        }
-    }
-  }
-  return arr
-}
-
 class PostsPage extends Component {
   static propTypes = {
     navKeys: PropTypes.object,
@@ -42,7 +29,7 @@ class PostsPage extends Component {
       <div className='page-content'>
         <SideNavBar path={this.props.route.path} navKeys={this.props.navKeys}></SideNavBar>
         <div className='sidebar-page'>
-          <Gallery renderItem={this.renderItem}
+          <Gallery
               posts={posts}
               loadingLabel={`Loading posts...`}
               />
