@@ -1,0 +1,37 @@
+
+#about-page .menu-button {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+#about-page #home {
+    padding-right: 10%;
+    padding-right: 10%;
+}
+
+#about-page #home .cover-image {
+    padding: 10%;
+    align-content: center;
+}
+
+#about-page #home .cover-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+
+#about-page #home .cover-title-and-tagline {
+    text-align: center;
+    padding: 10%;
+}
+
+#about-page #home .cover-title-and-tagline h1 {
+    /*margin: 0;
+    margin-top: 30%;*/
+}
+
+#about-page #home .cover-title-and-tagline h6 {
+    /*margin: 0;*/
+}
+

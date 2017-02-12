@@ -1,0 +1,11 @@
+
+#social-links ul {
+    margin: 10px;
+    list-style: none;
+}
+
+#social-links ul li {
+    display: inline-block;
+    padding: 5px;
+}
+

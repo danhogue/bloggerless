@@ -6,6 +6,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import Root from './containers/Root'
 import configureStore from './store/configureStore'
 import './styles/core.css'
+import './styles/style.css'
 
 // This is hashHistory without the queryKey junk on the end of the url
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
