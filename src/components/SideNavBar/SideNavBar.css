@@ -1,14 +1,47 @@
 .sidebar-page {
     position: absolute;
-    left: 220px;
+    left: 250px;
+    height: 100%;
 }
 
 .sidebar {
     position: fixed;
-    width: 220px;
-    color: white;
-    background-color: rgba(49, 51, 48, 0.972549);
-    height: 100%
+    width: 250px;
+    color: #333;
+    background-color: white;
+    height: 100%;
+    font-size: smaller;
+}
+
+.sidebar .sidebar-blurb h5 {
+    text-align: center;
+    margin: 0;
+}
+
+.sidebar .sidebar-blurb h6 {
+    text-align: center;
+    margin: 0;
+}
+
+.sidebar .sidebar-blurb hr {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 12px;
+}
+
+.sidebar .sidebar-footer {
+    position:absolute;
+    bottom:0;
+}
+
+.sidebar .sidebar-image {
+    align-content: center;
+    padding-left: 75px;
+    padding-top: 25px;
+}
+
+.sidebar .sidebar-image img {
+    width: 100px;
 }
 
 .sidebar li {
@@ -17,7 +50,7 @@
 
 .sidebar li a {
     text-decoration: none;
-    color: white;
+    color: #333;
 }
 
 .sidebar li a:hover {

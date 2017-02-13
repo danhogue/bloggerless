@@ -7,7 +7,11 @@ html, body, #root {
     margin: 0;
     padding: 0;
     height: 100%;
-    font: 400 112.5%/1.65 Raleway,sans-serif,serif;
+    font: 400 112.5%/1.5 Raleway,sans-serif,serif;
+    /*background-color: #f1f1f1;*/
+}
+.page-content {
+    height: 100%;
 }
 
 .float-left {
@@ -73,7 +77,3 @@ html, body, #root {
     .col-lg-11 {width: 91.66%;}
     .col-lg-12 {width: 100%;}
 }
-
-@media only screen and (min-width: 415px) {}
-@media only screen and (min-width: 769px) {}
-@media only screen and (min-width: 1025px) {}

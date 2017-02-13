@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { loadPosts } from '../actions'
 import Gallery from '../components/Gallery/Gallery'
 import SideNavBar from '../components/SideNavBar/SideNavBar'
+import '../styles/pages/PostsPage.css'
 
 const loadData = ({ loadPosts }) => {
   loadPosts()
@@ -26,7 +27,7 @@ class PostsPage extends Component {
   render() {
     const { posts } = this.props
     return (
-      <div className='page-content'>
+      <div id='posts-page' className='page-content'>
         <SideNavBar path={this.props.route.path} navKeys={this.props.navKeys}></SideNavBar>
         <div className='sidebar-page'>
           <Gallery

@@ -52,7 +52,9 @@ export default class Gallery extends Component {
 
     return (
       <div className="gallery-wrapper">
-        <header></header>
+        <header>
+          <a href='#'><i className="fa fa-home" aria-hidden="true"></i></a>
+        </header>
         <section>
           <ul className="gallery">
             {posts.map(this.renderItem)}

@@ -1,16 +1,15 @@
 
+#about-page {
+    background-color: white;
+    height: 100%;
+}
+
 #about-page .menu-button {
     margin-top: 15px;
     margin-left: 20px;
 }
 
-#about-page #home {
-    padding-right: 10%;
-    padding-right: 10%;
-}
-
 #about-page #home .cover-image {
-    padding: 10%;
     align-content: center;
 }
 
@@ -18,20 +17,38 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
+    width: 60%;
 }
 
 #about-page #home .cover-title-and-tagline {
     text-align: center;
-    padding: 10%;
 }
 
 #about-page #home .cover-title-and-tagline h1 {
-    /*margin: 0;
-    margin-top: 30%;*/
+    margin-bottom: 0;
 }
 
 #about-page #home .cover-title-and-tagline h6 {
-    /*margin: 0;*/
+    margin-top: 0;
 }
+
+@media only screen and (min-width: 568px) {
+    #about-page #home {
+        margin-bottom: 10%;
+    }
+
+    #about-page #home .cover-image {
+        padding-left: 15%;
+    }
+
+    #about-page #home .cover-title-and-tagline {
+        padding-right: 15%;
+    }
+
+    #about-page #home .cover-title-and-tagline h1 {
+        margin-top: 15%;
+    }
+}
+
+
 
