@@ -1,0 +1,13 @@
+
+.bread-crumbs-wrapper header {
+  height: 2.5rem;
+}
+
+.bread-crumbs-wrapper header a i {
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+
+

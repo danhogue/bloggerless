@@ -8,7 +8,7 @@ html, body, #root {
     padding: 0;
     height: 100%;
     font: 400 112.5%/1.5 Raleway,sans-serif,serif;
-    /*background-color: #f1f1f1;*/
+    background-color: #f1f1f1;
 }
 .page-content {
     height: 100%;
