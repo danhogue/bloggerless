@@ -1,7 +1,15 @@
 .sidebar-page {
-    position: absolute;
-    left: 250px;
+    padding-left: 250px;
     height: 100%;
+}
+
+.show-sidebar {
+    display: block !important;
+}
+
+.sidebar .close-btn {
+    display: none;
+    margin: 10px;
 }
 
 .sidebar {
@@ -29,11 +37,6 @@
     margin-top: 12px;
 }
 
-.sidebar .sidebar-footer {
-    position:absolute;
-    bottom:0;
-}
-
 .sidebar .sidebar-image {
     align-content: center;
     padding-left: 75px;
@@ -57,11 +60,14 @@
     color: goldenrod;
 }
 
-@media(max-width: 678px) {
+@media only screen and (max-width: 678px) {
     .sidebar {
         display: none;
     }
     .sidebar-page {
-        left: 0;
+        padding-left: 0;
+    }
+    .sidebar .close-btn {
+        display: block;
     }
 }

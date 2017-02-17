@@ -8,7 +8,8 @@ export default class SideNavBar extends Component {
         navKeys: PropTypes.object
     }
 
-    renderChildKeys(base, keys) {
+    renderChildKeys(base, child) {
+        let keys = Object.keys(child)
         var items = keys.map(function(key) {
             let href = base + '&cat2=' + key
             return (
@@ -18,6 +19,12 @@ export default class SideNavBar extends Component {
         return (
             <ul>{items}</ul>
         )
+    }
+
+    closeMenue(e) {
+        let sidebar = document.getElementById('sidebar')
+        sidebar.classList.remove('show-sidebar')
+        return false;
     }
 
     render() {
@@ -33,8 +40,13 @@ export default class SideNavBar extends Component {
         }.bind(this));
         return (
             <div id='sidebar' className='sidebar'>
+                <ul className="close-btn float-right">
+                    <li>
+                    <a onClick={this.closeMenue}><i className="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
                 <div className='sidebar-image'>
-                    <img src='./images/me.png' />
+                    <img src='./images/me.png' role="presentation" />
                 </div>
                 <div className='sidebar-blurb'>
                     <h5>Dan Hogue</h5>
@@ -43,9 +55,6 @@ export default class SideNavBar extends Component {
                     <hr />
                 </div>
                 <ul>{items}</ul>
-                {/*<footer className='sidebar-footer'>
-                    <SocialLinks></SocialLinks>
-                </footer>*/}
             </div>
         )
     }

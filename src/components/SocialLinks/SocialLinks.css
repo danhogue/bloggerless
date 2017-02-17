@@ -1,6 +1,8 @@
 
 #social-links ul {
     margin: 10px;
+    padding: 0;
+    text-align: center;
     list-style: none;
 }
 

@@ -28,7 +28,7 @@ export default class Gallery extends Component {
     }
     return (
       <div key={item.path} className='gallery__item'>
-        <a href={href}><img src={item.img} /></a>
+        <a href={href}><img src={item.img} role="presentation" /></a>
         <h2><a href={href}>{item.title}</a></h2>
         <p>{description}</p>
         </div>

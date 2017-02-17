@@ -1,13 +1,39 @@
 
 .bread-crumbs-wrapper header {
-  height: 2.5rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-.bread-crumbs-wrapper header a i {
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 15px;
+.bread-crumbs-wrapper header ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: small;
 }
 
+.bread-crumbs-wrapper header ul li:first-child {
+  margin-right: 6px;
+}
 
+.bread-crumbs-wrapper header ul li {
+  display: inline;
+}
 
+.bread-crumbs-wrapper header ul li a {
+  white-space: nowrap;
+}
+
+@media(min-width: 568px) {
+  .bread-crumbs-wrapper header ul {
+    font-size: smaller;
+  }
+}
+
+@media only screen and (min-width: 678px) {
+  .bread-crumbs-wrapper header ul li:last-child {
+    display: none;
+  }
+}

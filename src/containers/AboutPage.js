@@ -8,17 +8,9 @@ class AboutPage extends Component {
     return (
       <div id='about-page' className='page-content'>
         <section id='home'>
-          {/*<div className='row'>
-            <div className='menu-button float-left hidden'>
-              <a onClick={this.back}><i className="fa fa-bars" aria-hidden="true"></i></a>
-            </div>
-            <div className='float-right'>
-              <SocialLinks></SocialLinks>
-            </div>
-          </div>*/}
           <div className='row'>
             <div className='col-sm-12 col-md-6 cover-image'>
-              <img src='./images/me.png' />
+              <img src='./images/me.png' role="presentation" />
             </div>
             <div className='col-sm-12 col-md-6 cover-title-and-tagline'>
               <h1>Dan Hogue</h1>
