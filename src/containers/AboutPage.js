@@ -14,8 +14,14 @@ class AboutPage extends Component {
             </div>
             <div className='col-sm-12 col-md-6 cover-title-and-tagline'>
               <h1>Dan Hogue</h1>
-              <h6>Entrepreneurially minded fullstack intelligence engineer</h6>
+              {/*<h6>Fullstack intelligence engineer</h6>*/}
+              {/*<h6>Efficientizer, Solver, & Fixeruper.</h6>*/}
+              {/*<h6>Builder of Product. Writer of Code.</h6>*/}
+              {/*<h6>Entrepreneur. Geek.</h6>*/}
+              {/*<h6>Obsessive, compulsive designer of products. Coder.</h6>*/}
+              <h6>Product Designer. Coder.</h6>
               <SocialLinks></SocialLinks>
+              {/*<hr />*/}
               <a href='#/portfolio'>Portfolio </a>|
               <a href='#/blog'> Blog</a>
             </div>

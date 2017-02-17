@@ -40,7 +40,7 @@ export default class SideNavBar extends Component {
         }.bind(this));
         return (
             <div id='sidebar' className='sidebar'>
-                <ul className="close-btn float-right">
+                <ul className="close-btn">
                     <li>
                     <a onClick={this.closeMenue}><i className="fa fa-arrow-left" aria-hidden="true"></i></a>
                     </li>
@@ -50,7 +50,7 @@ export default class SideNavBar extends Component {
                 </div>
                 <div className='sidebar-blurb'>
                     <h5>Dan Hogue</h5>
-                    <h6>Fullstack intelligence engineer</h6>
+                    <h6>Product Designer. Coder.</h6>
                     <SocialLinks></SocialLinks>
                     <hr />
                 </div>

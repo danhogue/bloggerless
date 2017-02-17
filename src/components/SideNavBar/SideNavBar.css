@@ -8,6 +8,8 @@
 }
 
 .sidebar .close-btn {
+    position: absolute;
+    right: 0;
     display: none;
     margin: 10px;
 }
@@ -45,6 +47,18 @@
 
 .sidebar .sidebar-image img {
     width: 100px;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar>ul {
+    margin-left: 40px;
+}
+
+.sidebar>ul>li>a {
+    font-weight: bolder;
 }
 
 .sidebar li {

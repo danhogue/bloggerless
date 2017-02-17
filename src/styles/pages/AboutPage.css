@@ -1,7 +1,7 @@
 
 #about-page {
     background-color: white;
-    height: 100%;
+    height: 800px;
 }
 
 #about-page .menu-button {
@@ -10,6 +10,7 @@
 }
 
 #about-page #home .cover-image {
+    margin-top: 5%;
     align-content: center;
 }
 
@@ -30,6 +31,11 @@
 
 #about-page #home .cover-title-and-tagline h6 {
     margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#about-page #home .cover-title-and-tagline hr {
+    width: 60%;
 }
 
 @media only screen and (min-width: 568px) {
