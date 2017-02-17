@@ -3,7 +3,7 @@ import './BreadCrumbs.css'
 
 export default class BreadCrumbs extends Component {
   static propTypes = {
-      path: PropTypes.string
+      location: PropTypes.object
   }
 
   openMenue(e) {
@@ -13,14 +13,30 @@ export default class BreadCrumbs extends Component {
   }
 
   render() {
+    const { location } = this.props
+    let path = location.pathname.replace('/','')
+    let pathname = path.charAt(0).toUpperCase() + path.slice(1);
+    let category1Link = ''
+    let category2Link = ''
+    if (location.query) {
+      let cat1 = location.query['cat1']
+      let cat2 = location.query['cat2']
+      if (cat1){
+        category1Link = (<li><span> > </span><a href={'#/'+path+'?cat1='+cat1}> {cat1}</a></li>)
+      }
+      if (cat2) {
+        category2Link = (<li><span> > </span><a href={'#/'+path+'?cat1='+cat1+'&cat2='+cat2}> {cat2}</a></li>)
+      }
+    }
+
     return (
       <div className="bread-crumbs-wrapper">
         <header>
           <ul>
             <li><a href='#'><i className="fa fa-home" aria-hidden="true"></i></a></li>
-            <li><a href='#/blog'>Blog</a></li>
-            <li><span> > </span><a href='#/blog?cat1=Professional Me'> Professional Me</a></li>
-            <li><span> > </span><a href='#/blog?cat1=Personal Me&cat2=Leadership'> Leadership</a></li>
+            <li><a href={'#/'+path}>{pathname}</a></li>
+            {category1Link}
+            {category2Link}
             <li className='float-right'>
               <a onClick={this.openMenue}><i className="fa fa-bars" aria-hidden="true"></i></a>
             </li>

@@ -31,7 +31,7 @@ class PostsPage extends Component {
       <div id='posts-page' className='page-content'>
         <SideNavBar path={this.props.route.path} navKeys={this.props.navKeys}></SideNavBar>
         <div className='sidebar-page'>
-          <BreadCrumbs path={this.props.route.path}></BreadCrumbs>
+          <BreadCrumbs location={this.props.location}></BreadCrumbs>
           <Gallery
               posts={posts}
               loadingLabel={`Loading posts...`}
