@@ -13,7 +13,7 @@ class AboutPage extends Component {
               <img src='./images/me.png' role="presentation" />
             </div>
             <div className='col-sm-12 col-md-6 cover-title-and-tagline'>
-              <h1>Dan Hogue</h1>
+              <h3>Dan Hogue</h3>
               {/*<h6>Fullstack intelligence engineer</h6>*/}
               {/*<h6>Efficientizer, Solver, & Fixeruper.</h6>*/}
               {/*<h6>Builder of Product. Writer of Code.</h6>*/}
@@ -21,7 +21,7 @@ class AboutPage extends Component {
               {/*<h6>Obsessive, compulsive designer of products. Coder.</h6>*/}
               <h6>Product Designer. Coder.</h6>
               <SocialLinks></SocialLinks>
-              {/*<hr />*/}
+              <hr />
               <a href='#/portfolio'>Portfolio </a>|
               <a href='#/blog'> Blog</a>
             </div>

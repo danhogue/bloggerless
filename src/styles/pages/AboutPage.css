@@ -25,13 +25,13 @@
     text-align: center;
 }
 
-#about-page #home .cover-title-and-tagline h1 {
-    margin-bottom: 0;
+#about-page #home .cover-title-and-tagline h3 {
+    margin-bottom: 10px;
 }
 
 #about-page #home .cover-title-and-tagline h6 {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 #about-page #home .cover-title-and-tagline hr {

@@ -8,6 +8,13 @@
 }
 
 #post-page .post-content {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media only screen and (min-width: 678px) {
+    #post-page .post-content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
