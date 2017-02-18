@@ -40,21 +40,30 @@
 
 @media only screen and (min-width: 568px) {
     #about-page #home {
-        margin-bottom: 10%;
+        padding-top: 5%;
     }
 
     #about-page #home .cover-image {
-        padding-left: 15%;
+        padding-left: 12%;
     }
 
     #about-page #home .cover-title-and-tagline {
-        padding-right: 15%;
-    }
-
-    #about-page #home .cover-title-and-tagline h1 {
-        margin-top: 15%;
+        padding-right: 12%;
     }
 }
 
+@media only screen and (min-width: 800px) {
+    #about-page #home {
+        padding-top: 5%;
+    }
+
+    #about-page #home .cover-image {
+        padding-left: 12%;
+    }
+
+    #about-page #home .cover-title-and-tagline {
+        padding-right: 12%;
+    }
+}
 
 
